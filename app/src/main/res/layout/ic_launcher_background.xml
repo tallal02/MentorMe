@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#26A69A"
+    android:padding="24dp">
+
+    <!-- App Name/Logo -->
+<TextView
+android:id="@+id/textViewLogo"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_centerHorizontal="true"
+android:layout_marginTop="32dp"
+android:text="mentorme"
+android:textSize="30sp"
+android:textStyle="bold"
+android:textColor="#FFEB3B" /> <!-- Logo color -->
+
+    <!-- Login Label -->
+<TextView
+android:id="@+id/textViewLoginLabel"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@id/textViewLogo"
+android:layout_centerHorizontal="true"
+android:layout_marginTop="24dp"
+android:text="Login"
+android:textAppearance="?android:attr/textAppearanceLarge"
+android:textColor="#FFFFFF" /> <!-- White color for the text -->
+
+    <!-- Email input field -->
+
+<EditText
+android:id="@+id/editTextEmail"
+android:layout_width="match_parent"
+android:layout_height="48dp"
+    android:layout_below="@id/textViewLoginLabel"
+    android:layout_marginTop="24dp"
+    android:hint="Email"
+    android:background="@drawable/edit_text_background"
+    android:inputType="textEmailAddress"
+    android:padding="12dp" />
+
+    <!-- Password input field -->
+<EditText
+android:id="@+id/editTextPassword"
+android:layout_width="match_parent"
+android:layout_height="48dp"
+android:layout_below="@id/editTextEmail"
+android:layout_marginTop="16dp"
+android:hint="Password"
+android:background="@drawable/edit_text_background"
+android:inputType="textPassword"
+android:padding="12dp" />
+
+    <!-- Forgot Password -->
+<TextView
+android:id="@+id/textViewForgotPassword"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@id/editTextPassword"
+android:layout_alignParentEnd="true"
+android:text="Forgot Your Password?"
+android:textColor="#FFFFFF"
+android:textSize="14sp" />
+
+    <!-- Login button -->
+<Button
+android:id="@+id/buttonLogin"
+android:layout_width="match_parent"
+android:layout_height="48dp"
+android:layout_below="@id/textViewForgotPassword"
+android:layout_marginTop="24dp"
+android:background="@drawable/button_background"
+    android:text="Login"
+    android:textColor="#26A69A" />
+
+    <!-- Sign Up prompt -->
+<TextView
+android:id="@+id/textViewSignUpPrompt"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@id/buttonLogin"
+android:layout_centerHorizontal="true"
+android:layout_marginTop="32dp"
+android:text="Don't have an account? Sign Up"
+android:textColor="#FFFFFF"
+android:textSize="14sp" />
+    </RelativeLayout>
