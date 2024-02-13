@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#YourBackgroundColor">
+
+    <!-- Back arrow and title -->
+    <TextView
+        android:id="@+id/verificationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+
+        android:text="Verify your phone number"
+        android:textAppearance="?attr/textAppearanceHeadline6" />
+
+    <!-- Subtitle with phone number -->
+    <TextView
+        android:id="@+id/verificationSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verificationTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="We've sent a code to +92 321 2242022"
+        android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+    <!-- Code input circles -->
+    <!-- You would use a custom view or library to handle input and display -->
+    <!-- This is just a visual representation -->
+    <LinearLayout
+        android:id="@+id/codeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verificationSubtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Repeat this ImageView for the number of digits in your code -->
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/circle_outline" />
+        <!-- Add more ImageViews for each digit required for the code -->
+    </LinearLayout>
+
+    <!-- Verify Button -->
+    <Button
+        android:id="@+id/verifyButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/codeContainer"
+        android:layout_margin="20dp"
+        android:text="Verify"
+        android:background="@drawable/button_background" />
+
+    <!-- Timer to resend code -->
+    <TextView
+        android:id="@+id/timerResendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verifyButton"
+        android:layout_centerHorizontal="true"
+        android:text="Send code again 00:20"
+        android:textAppearance="?attr/textAppearanceBody2" />
+
+    <!-- Number pad -->
+    <!-- Number pad -->
+    <GridLayout
+        android:id="@+id/numberPad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timerResendCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:rowCount="4"
+        android:columnCount="3"
+        android:layout_marginBottom="32dp">
+
+        <!-- Number buttons 1-9 -->
+        <Button
+            style="@style/NumberPadButtonStyle"
+            android:text="1" />
+
+        <Button
+            style="@style/NumberPadButtonStyle"
+            android:text="2" />
+
+        <Button
+            style="@style/NumberPadButtonStyle"
+            android:text="3" />
+
+        <Button
+            style="@style/NumberPadButtonStyle"
+            android:text="4" />
+
+        <Button
+            style="@style/NumberPadButtonStyle"
+            android:text="5" />
+
+        <Button
+            style="@style/NumberPadButtonStyle"
+            android:text="6" />
+
+        <Button
+            style="@style/NumberPadButtonStyle"
+            android:text="7" />
+
+        <Button
+            style="@style/NumberPadButtonStyle"
+            android:text="8" />
+
+        <Button
+            style="@style/NumberPadButtonStyle"
+            android:text="9" />
+
+        <!-- Placeholder for alignment, this should be invisible -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1" />
+
+        <!-- Zero button -->
+        <Button
+            style="@style/NumberPadButtonStyle"
+            android:text="0" />
+
+        <!-- Delete button -->
+        <Button
+            style="@style/NumberPadButtonStyle"
+            android:text="✕" />
+
+    </GridLayout>
+</RelativeLayout>
+
