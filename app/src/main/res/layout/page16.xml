@@ -4,85 +4,71 @@
     android:layout_height="match_parent"
     android:background="#EFEFEF">
 
-    <RelativeLayout
-        android:id="@+id/header"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/contactName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#00BCD4"
-        android:padding="16dp">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:text="John Cooper"
+        android:textSize="24sp"
+        android:textColor="#000000" />
 
-        <ImageView
-            android:id="@+id/backArrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_back_arrow"
-            android:contentDescription="@string/back" />
-
-        <TextView
-            android:id="@+id/communityTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="John Cooper’s Community"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#FFFFFF" />
-
-        <ImageView
-            android:id="@+id/communitySettings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_settings"
-            android:layout_alignParentEnd="true"
-            android:contentDescription="@string/settings" />
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/callDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/contactName"
+        android:text="50:08"
+        android:textSize="20sp"
+        android:textColor="#555555"
+        android:layout_marginTop="8dp" />
 
     <ImageView
-        android:id="@+id/profilePicture"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/profile_picture"
-        android:layout_below="@id/header"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="-40dp"
-        android:background="@drawable/profile_picture_background" />
+        android:id="@+id/contactImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/profile_image"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/callDuration"
+    android:layout_marginTop="24dp"
+    android:contentDescription="@string/profile_picture" />
 
-    <ListView
-        android:id="@+id/chatListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/profilePicture"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="10dp"
-        android:padding="16dp"
-        android:clipToPadding="false"
-        android:layout_above="@+id/messageInputLayout" />
-
-    <RelativeLayout
-        android:id="@+id/messageInputLayout"
+    <!-- Bottom action buttons -->
+    <LinearLayout
+        android:id="@+id/bottomActionButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#FFFFFF"
-        android:padding="8dp">
+        android:gravity="center"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
 
-        <EditText
-            android:id="@+id/messageInput"
+        <ImageView
+            android:id="@+id/muteButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_toStartOf="@+id/sendMessageButton"
-            android:hint="Type something ..."
-            android:background="@drawable/message_input_background" />
+            android:src="@drawable/ic_mute"
+        android:contentDescription="@string/mute" />
 
         <ImageView
-            android:id="@+id/sendMessageButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/speakerButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_send_message"
-            android:layout_alignParentEnd="true"
-            android:contentDescription="@string/send" />
-    </RelativeLayout>
+            android:layout_weight="1"
+            android:src="@drawable/ic_speaker"
+        android:contentDescription="@string/speaker" />
 
-
+        <ImageView
+            android:id="@+id/endCallButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_end_call"
+        android:contentDescription="@string/end_call" />
+    </LinearLayout>
 
 </RelativeLayout>
