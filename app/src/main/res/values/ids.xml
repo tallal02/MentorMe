@@ -5,4 +5,5 @@
     <item name="resetPasswordHeader" type="id">ff</item>
     <item name="instructionText" type="id">d</item>
     <item name="back_Arrow" type="id">v</item>
+    <item name="bottomNavigation" type="id">bottom</item>
 </resources>
