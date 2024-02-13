@@ -1,46 +1,35 @@
-package com.tallaleatazaz.i210637
+package com.example.assign_1
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.tallaleatazaz.i210637.ui.theme.I210637Theme
+import android.util.DisplayMetrics
+import android.widget.TextView  // Import TextView class
+import androidx.appcompat.app.AppCompatActivity
+import com.tallaleatazaz.i210637.R
+import com.tallaleatazaz.i210637.page2Login
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            I210637Theme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
+        setContentView(R.layout.page1)
+
+        val textViewMentor: TextView = findViewById(R.id.textViewMentor)
+
+        textViewMentor.setOnClickListener {
+            // Define the destination activity
+            val intent = Intent(this, page2Login::class.java)
+
+            // Start the next activity
+            startActivity(intent)
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        val displayMetrics = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(displayMetrics)
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    I210637Theme {
-        Greeting("Android")
+        val screenWidth = displayMetrics.widthPixels
+        val screenHeight = displayMetrics.heightPixels
+
+
     }
 }
