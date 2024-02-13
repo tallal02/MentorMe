@@ -2,88 +2,69 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#50C2C9">
-
-    <ImageView
-        android:id="@+id/backArrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/back_arrow"
-        android:contentDescription="@string/back"
-        android:layout_margin="16dp"/>
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:background="#50C2C9"
+    tools:context=".page6resetpassword">
 
     <TextView
-        android:id="@+id/title"
-        android:layout_toRightOf="@id/backArrow"
+        android:id="@+id/resetPasswordHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Let's Find..."
-        android:textStyle="bold"
+        android:text="Reset Password?"
         android:textSize="24sp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"/>
+        android:textColor="#000000"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/instructionText"
+        android:layout_below="@id/resetPasswordHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please type a new password and re-enter the password. Type something you will remember!"
+        android:textColor="#666666"
+        android:layout_marginBottom="16dp" />
 
     <EditText
-        android:id="@+id/searchField"
+        android:id="@+id/newPassword"
+        android:layout_below="@id/instructionText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Search"
-        android:inputType="text"
-        android:drawableStart="@drawable/ic_search"
-        android:drawablePadding="10dp"
+        android:hint="Enter New Password"
+        android:inputType="textPassword"
+        android:background="#E0E0E0"
         android:padding="12dp"
-        android:background="@drawable/search_background"
-        android:layout_below="@id/title"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_below="@id/newPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Re-enter Password"
+        android:inputType="textPassword"
+        android:background="#E0E0E0"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/resetPasswordButton"
+        android:layout_below="@id/confirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_password"
+        android:background="#299C6D"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/loginInsteadText"
+        android:layout_below="@id/resetPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't want to reset password? Login"
+        android:textSize="16sp"
+        android:textColor="#2196F3"
         android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"/>
-
-    <TextView
-        android:id="@+id/recentSearchesHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Recent searches"
-        android:textSize="18sp"
-        android:layout_below="@id/searchField"
-        android:layout_marginTop="24dp"
-        android:layout_marginLeft="16dp"/>
-
-
-    <LinearLayout
-        android:id="@+id/recentSearches"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@id/recentSearchesHeader"
-        android:layout_marginTop="8dp">
-
-
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/browseCategoriesHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Browse Categories"
-        android:textSize="18sp"
-        android:layout_below="@id/recentSearches"
-        android:layout_marginTop="24dp"
-        android:layout_marginLeft="16dp"/>
-
-
-    <LinearLayout
-        android:id="@+id/categories"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@id/browseCategoriesHeader"
-        android:layout_marginTop="8dp">
-
-
-
-    </LinearLayout>
-
-
-
+        android:gravity="center" />
 </RelativeLayout>
