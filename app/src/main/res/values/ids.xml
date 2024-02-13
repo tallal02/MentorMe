@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="textViewLoginLabel" type="id" />
+    <item name="resetPasswordButton" type="id">id</item>
+    <item name="resetPasswordHeader" type="id">ff</item>
+    <item name="instructionText" type="id">d</item>
+    <item name="back_Arrow" type="id">v</item>
 </resources>
